@@ -1,3 +1,12 @@
+/**
+A simple sketch that fades in and out
+3 different colours intermittently using an
+RGB led.
+
+I experimented with using higher order functions
+in C, which worked surprisingly well :-)  
+*/
+
 #define BLUE 3
 #define GREEN 5
 #define RED 6
@@ -21,8 +30,6 @@ void loop() {
 
 
 //==================================
-
-
 
 void initialise() {
   pinMode(BLUE, OUTPUT);
@@ -54,7 +61,6 @@ void fadeLoop(int led, int value, IntPred pred, UniFun cons) {
     delay(delayTime);
     }
 }
-
 
 bool isMoreThanRGBMin(int n) {return n > RGB_MIN;}
 int decr(int *n) {return --*n;}
